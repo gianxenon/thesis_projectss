@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ecf0f3"
+    tools:context=".forgetpass_confirmation">
+    <ImageView
+        android:id="@+id/fpass_imgV_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/fpass_imgV_logo"
+        android:padding="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/fpass_logo"
+        tools:layout_editor_absoluteY="16dp" />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/fpass_imgV_logo">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/fpass_lay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ecf0f3"
+
+            android:orientation="vertical">
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/fpass_bg"
+                android:padding="20dp"
+                app:neumorph_shadowColorDark="#d9d9d9"
+                app:neumorph_shadowColorLight="#fff"
+                app:neumorph_shadowElevation="5dp"
+                app:neumorph_shapeType="flat">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="@string/txtv_fpass_directions"
+                    android:textColor="#353935"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </soup.neumorphism.NeumorphCardView>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/username"
+                android:textColor="#353935"
+                android:textStyle="bold" />
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/neumorphCardViewf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="#efefef"
+
+                app:neumorph_shadowColorDark="#d9d9d9"
+                app:neumorph_shadowColorLight="#fff"
+                app:neumorph_shadowElevation="5dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/fpass_edt_usr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/no_background"
+                    android:ems="10"
+                    android:hint="@string/enter_username"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp" />
+            </soup.neumorphism.NeumorphCardView>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/contact_number"
+                android:textColor="#353935"
+                android:textStyle="bold" />
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/neumorphCardViewg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="#efefef"
+                app:neumorph_shadowColorDark="#d9d9d9"
+                app:neumorph_shadowColorLight="#fff"
+                app:neumorph_shadowElevation="5dp"
+                app:neumorph_shapeType="pressed">
+
+                <EditText
+                    android:id="@+id/fpass_edt_cntrnum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/no_background"
+                    android:ems="10"
+                    android:hint="@string/enter_contact_number"
+                    android:importantForAutofill="no"
+                    android:inputType="phone"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp" />
+            </soup.neumorphism.NeumorphCardView>
+
+            <Button
+                android:id="@+id/fpass_btn_Continue"
+                android:background="@drawable/button_corner"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp"
+                android:text="@string/fpass_btn_Submit"
+                android:textSize="16sp"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fpass_laytwo"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="@string/enter_your_one_time_pin"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fpass_contentDes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="@string/please_enter_the_verification_code_we_sent" />
+
+            <EditText
+                android:id="@+id/fpass_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/_09xxxxx"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/resendCodeTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/didn_t_get_otp_resend" />
+
+            <Button
+
+                android:id="@+id/fpass_btn_submit"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="@string/submit"
+                android:textSize="16sp"
+                android:background="@drawable/button_corner"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+               />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+
+
+</RelativeLayout>
